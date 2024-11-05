@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const songListUrl = '/web_radio/songs.txt';
-    const speakListUrl = '/web_radio/speak.txt';
+    const songListUrl = '/tctc_radio/songs.txt';
+    const speakListUrl = '/tctc_radio/speak.txt';
     let musicFiles = [];
     let speakFiles = [];
     let isPlaying = false;
@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (musicFiles.length === 0) return;
 
         const randomIndex = Math.floor(Math.random() * musicFiles.length);
-        const selectedSong = musicFiles[randomIndex].startsWith('/web_radio/music/')
+        const selectedSong = musicFiles[randomIndex].startsWith('/tctc_radio/music/')
             ? musicFiles[randomIndex]
-            : `/web_radio/music/${musicFiles[randomIndex]}`;
+            : `/tctc_radio/music/${musicFiles[randomIndex]}`;
 
         songPlayer.src = selectedSong;
         console.log("Playing song:", selectedSong);
@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function playAnnouncement() {
         const randomIndex = Math.floor(Math.random() * speakFiles.length);
-        const selectedAnnouncement = speakFiles[randomIndex].startsWith('/web_radio/speak/')
+        const selectedAnnouncement = speakFiles[randomIndex].startsWith('/tctc_radio/speak/')
             ? speakFiles[randomIndex]
-            : `/web_radio/speak/${speakFiles[randomIndex]}`;
+            : `/tctc_radio/speak/${speakFiles[randomIndex]}`;
 
         announcementPlayer.src = selectedAnnouncement;
         announcementPlayer.volume = 0.5; // Set announcement volume lower than the song
