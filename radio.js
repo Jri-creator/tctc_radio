@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (speakFiles.length > 0) {
                 playAnnouncement();
             }
-        }, 10 * 60 * 1000); // Every 10 minutes
+        }, 0.10 * 60 * 1000); // Every 10 minutes
     }
 
     function playAnnouncement() {
