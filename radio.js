@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function playAnnouncement() {
         const randomIndex = Math.floor(Math.random() * speakFiles.length);
-        const selectedAnnouncement = speakFiles[randomIndex].startsWith('/tctc_radio/speak/')
+        const selectedAnnouncement = speakFiles[randomIndex].startsWith('/tctc_radio/announce/')
             ? speakFiles[randomIndex]
-            : `/tctc_radio/speak/${speakFiles[randomIndex]}`;
+            : `/tctc_radio/announce/${speakFiles[randomIndex]}`;
 
         announcementPlayer.src = selectedAnnouncement;
         announcementPlayer.volume = 0.5; // Set announcement volume lower than the song
