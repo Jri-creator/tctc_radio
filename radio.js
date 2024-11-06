@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Fetched music files:", musicFiles);
                 if (musicFiles.length > 0) {
                     playPauseButton.disabled = false;
-                    nextButton.disabled = false;
+                    //nextButton.disabled = false;
                 } else {
                     console.error("No songs found in the list.");
                 }
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (speakFiles.length > 0) {
                 playAnnouncement();
             }
-        }, 0.10 * 60 * 1000); // Every 10 minutes
+        }, 10 * 60 * 1000); // Every 10 minutes
     }
 
     function playAnnouncement() {
